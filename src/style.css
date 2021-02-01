@@ -6,15 +6,16 @@ body {
 
 .container {
   background: rgb(190, 190, 170);
-  width: calc(44px * 4);
+  width: calc(200px * 4);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .balloon {
-  height: 44px;
-  width: 44px;
+  height: 100px;
+  width: 100px;
   border: 1px dashed red;
   flex-grow: 1;
+  border-radius: 50%;
 }
