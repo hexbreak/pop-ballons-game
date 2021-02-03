@@ -1,11 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
 body {
-  background: blue;
 }
 
 .container {
-  background: rgb(190, 190, 170);
   width: calc(200px * 4);
   display: flex;
   flex-direction: row;
@@ -25,12 +23,13 @@ body {
   position: absolute;
   background: inherit;
   bottom: -5px;
-  left: 18px;
+  left: 47px;
   display: block;
-  content: "";
+  content: "|";
   height: 10px;
   width: 3px;
   border-radius: 100%;
+  border: 1px solid red;
 }
 
 .balloon:hover {
