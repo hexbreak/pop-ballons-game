@@ -13,8 +13,14 @@ const container = document.querySelector(".container");
 let content = "";
 let balloons = ["pink", "black", "red", "purple"];
 
-balloons.forEach(function() {
-  content = content + '<div class="balloon"></div>';
+balloons.forEach(function(color, i) {
+  console.log("Loop " + i + " " + color, content);
+  content =
+    content +
+    `<div 
+        class="balloon"
+        style="background: ${color}">
+        </div>`;
 });
 
 container.innerHTML = content;
