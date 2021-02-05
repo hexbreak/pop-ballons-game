@@ -11,7 +11,16 @@ window.onload = function() {
 
 const container = document.querySelector(".container");
 let content = "";
-let balloons = ["pink", "black", "red", "purple"];
+let balloons = [
+  "pink",
+  "black",
+  "red",
+  "purple",
+  "yellow",
+  "purple",
+  "gold",
+  "green"
+];
 
 balloons.forEach(function(color, i) {
   console.log("Loop " + i + " " + color, content);
