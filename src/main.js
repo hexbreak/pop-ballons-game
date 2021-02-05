@@ -14,9 +14,9 @@ let content = "";
 let balloons = ["pink", "black", "red", "purple"];
 
 balloons.forEach(function() {
-  content += "";
+  content = content + '<div class="balloon"></div>';
 });
 
-container.innerHTML = "Hello World";
+container.innerHTML = content;
 
 console.log("Hello World on the console!");
