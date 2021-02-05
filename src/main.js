@@ -9,16 +9,14 @@ window.onload = function() {
   console.log("Hello Rigo from the console!");
 };
 
-// const container = document.querySelector('.container');
-// let content = "";
-// let balloons = []
-//     'pink', 'black',' red', 'purple'
-// ];
+const container = document.querySelector(".container");
+let content = "";
+let balloons = ["pink", "black", "red", "purple"];
 
-// balloons.forEach(function() {
-//     content = content + 'div class="balloon"></div>';
-// });
+balloons.forEach(function() {
+  content += "";
+});
 
-// container.innerHTML = content;
+container.innerHTML = "Hello World";
 
-// console.log("test!");
+console.log("Hello World on the console!");
