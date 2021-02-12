@@ -39,7 +39,7 @@ let balloons = [
   "pink",
   "black",
   "red",
-  "purple",
+  null,
   "yellow",
   "purple",
   "gold",
