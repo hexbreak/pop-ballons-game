@@ -10,7 +10,6 @@ window.onload = function() {
 };
 
 const container = document.querySelector(".container");
-let content = "";
 let balloons = [
   "pink",
   "black",
@@ -54,25 +53,32 @@ let balloons = [
   "green"
 ];
 
-function popBaloon(position) {
-  ballons[position] = null;
+function popBalloon(pos) {
+  balloons[pos] = null;
+  renderBalloons();
 }
 
-balloons.forEach(function(color, location) {
-  console.log("Loop " + location + " " + color, content);
-  let visible = "";
-  if (color === null) {
-    visible = "popped";
-  }
-  content =
-    content +
-    `<div 
-        class="balloon ${visible}"
+function renderBalloons() {
+  let content = "";
+  balloons.forEach(function(color, position) {
+    console.log("Loop " + position + " " + color, content);
+
+    //
+    let balloonVisibility = "visibled";
+    if (color === null) {
+      balloonVisibility = "popped";
+    }
+
+    content =
+      content +
+      `<div 
+        class="balloon ${balloonVisibility}"
         style="background: ${color}"
-        onClick="popBalloon(${location});">
+        onClick="popBalloon(${position});">
         </div>`;
-});
+  });
+  container.innerHTML = content;
+}
 
-container.innerHTML = content;
-
+renderBalloons();
 console.log("Hello World on the console!");
