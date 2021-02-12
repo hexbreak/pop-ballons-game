@@ -17,6 +17,7 @@ body {
   flex-grow: 1;
   border-radius: 50%;
   position: relative;
+  cursor: pointer;
 }
 
 .balloon.popped {

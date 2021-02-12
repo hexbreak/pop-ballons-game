@@ -54,15 +54,22 @@ let balloons = [
   "green"
 ];
 
-balloons.forEach(function(color, i) {
-  console.log("Loop " + i + " " + color, content);
+function popBaloon(position) {
+  ballons[position] = null;
+}
+
+balloons.forEach(function(color, location) {
+  console.log("Loop " + location + " " + color, content);
   let visible = "";
-  if (color === null) visible = "popped";
+  if (color === null) {
+    visible = "popped";
+  }
   content =
     content +
     `<div 
         class="balloon ${visible}"
-        style="background: ${color}">
+        style="background: ${color}"
+        onClick="popBalloon(${location});">
         </div>`;
 });
 
