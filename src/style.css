@@ -1,13 +1,11 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-body {
-}
-
 .container {
   width: 300px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: auto;
 }
 
 .balloon {
