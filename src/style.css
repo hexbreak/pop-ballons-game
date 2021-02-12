@@ -4,19 +4,23 @@ body {
 }
 
 .container {
-  width: calc(200px * 4);
+  width: 300px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .balloon {
-  height: 100px;
-  width: 100px;
+  height: 60px;
+  width: 60px;
   border: 1px dashed red;
   flex-grow: 1;
   border-radius: 50%;
   position: relative;
+}
+
+.balloon.popped {
+  visibility: hidden;
 }
 
 .balloon:after {

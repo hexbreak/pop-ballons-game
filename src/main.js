@@ -19,15 +19,49 @@ let balloons = [
   "yellow",
   "purple",
   "gold",
+  "green",
+  "pink",
+  "black",
+  "red",
+  "purple",
+  "yellow",
+  "purple",
+  "gold",
+  "green",
+  "pink",
+  "black",
+  "red",
+  "purple",
+  "yellow",
+  "purple",
+  "gold",
+  "green",
+  "pink",
+  "black",
+  "red",
+  "purple",
+  "yellow",
+  "purple",
+  "gold",
+  "green",
+  "pink",
+  "black",
+  "red",
+  "purple",
+  "yellow",
+  "purple",
+  "gold",
   "green"
 ];
 
 balloons.forEach(function(color, i) {
   console.log("Loop " + i + " " + color, content);
+  let visible = "";
+  if (color === null) visible = "popped";
   content =
     content +
     `<div 
-        class="balloon"
+        class="balloon ${visible}"
         style="background: ${color}">
         </div>`;
 });
