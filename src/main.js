@@ -51,13 +51,14 @@ let balloons = [
 
 function popBalloon(pos) {
   balloons[pos] = null;
+  console.log(balloons[pos]);
   renderBalloons();
 }
 
 function renderBalloons() {
   let content = "";
   balloons.forEach(function(color, position) {
-    console.log("Loop " + position + " " + color, content);
+    // console.log("Loop " + position + " " + color, content);
 
     //
     let balloonVisibility = "visibled";
@@ -65,9 +66,7 @@ function renderBalloons() {
       balloonVisibility = "popped";
     }
 
-    content =
-      content +
-      `<div 
+    content += `<div 
         class="balloon ${balloonVisibility}"
         style="background: ${color}"
         onClick="popBalloon(${position});">
@@ -75,6 +74,4 @@ function renderBalloons() {
   });
   container.innerHTML = content;
 }
-
 renderBalloons();
-console.log("Hello World on the console!");
