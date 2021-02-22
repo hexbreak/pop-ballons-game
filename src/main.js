@@ -5,6 +5,10 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
+window.onload = function() {
+  renderBalloons();
+};
+
 const container = document.querySelector(".container");
 let balloons = [
   "pink",
@@ -51,27 +55,22 @@ let balloons = [
 
 function popBalloon(pos) {
   balloons[pos] = null;
-  console.log(balloons[pos]);
   renderBalloons();
 }
 
-function renderBalloons() {
+const renderBalloons = () => {
   let content = "";
-  balloons.forEach(function(color, position) {
-    // console.log("Loop " + position + " " + color, content);
-
-    //
-    let balloonVisibility = "visibled";
-    if (color === null) {
-      balloonVisibility = "popped";
-    }
-
+  balloons.forEach((color, position) => {
     content += `<div 
-        class="balloon ${balloonVisibility}"
-        style="background: ${color}"
-        onClick="popBalloon(${position});">
+        class="balloon ${color === null ? "popped" : "visibled"}"
+        style="background: ${color}">
         </div>`;
   });
   container.innerHTML = content;
-}
-renderBalloons();
+  if (content !== "") {
+    let allBalloons = document.querySelectorAll(".balloon");
+    allBalloons.forEach((singleBalloon, index) => {
+      singleBalloon.addEventListener("click", () => popBalloon(index));
+    });
+  }
+};
