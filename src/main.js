@@ -37,20 +37,8 @@ let balloons = [
   "green",
   "pink",
   "black",
-  "red",
-  null,
-  "yellow",
-  "purple",
-  "gold",
   "green",
-  "pink",
-  "black",
-  "red",
-  "purple",
-  "yellow",
-  "purple",
-  "gold",
-  "green"
+  "pink"
 ];
 
 function popBalloon(pos) {
